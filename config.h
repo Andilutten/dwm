@@ -6,13 +6,15 @@ static const unsigned int gappx     = 6;
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Hasklig:style=Bold:size=10" };
-static const char dmenufont[]       = "Hasklig:style=Bold:size=10";
+static const int topbar             = 0;        /* 0 means bottom bar */
+static const char *fonts[]          = { "Fira Code:size=10" };
+static const char dmenufont[]       = "Fira Code:size=10";
 static const char col_gray1[]       = "#252525";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#a3a3a3";
 static const char col_gray4[]       = "#eeeeee";
+
+// TODO Make the foreground pop instead of the background. More simplistic
 static const char col_yellow[]        = "#d8af5f";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
