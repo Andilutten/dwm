@@ -13,15 +13,15 @@ static const char col_gray1[]       = "#252525";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#a3a3a3";
 static const char col_gray4[]       = "#eeeeee";
-
-// TODO Make the foreground pop instead of the background. More simplistic
 static const char col_yellow[]        = "#d8af5f";
+/* #include "/home/andilutten/.cache/wal/colors-wal-dwm.h" */
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	/* [SchemeNorm] = { col_gray3, col_gray1, col_gray2 }, */
 	/* [SchemeSel]  = { col_gray4, col_yellow,  col_yellow  }, */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_gray1,  col_yellow  },
+	[SchemeSel]  = { col_yellow, col_gray1,  col_yellow  },
 };
 
 /* tagging */
@@ -63,8 +63,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_yellow, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
+static const char *termcmd[]  = { "st", NULL };
 static const char *upvol[] = {"/usr/bin/pactl", "set-sink-volume", "0", "+5%", NULL };
 static const char *downvol[] = {"/usr/bin/pactl", "set-sink-volume", "0", "-5%", NULL };
 static const char *mutevol[] = {"/usr/bin/pactl", "set-sink-mute", "0", "toggle", NULL };
